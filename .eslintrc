@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/anchor-is-valid": [
+      2,
+      {
+        "components": [
+          "a"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": [
+      2,
+      {
+        "ignore": [
+          "data",
+          "children"
+        ]
+      }
+    ]
+  }
+}
