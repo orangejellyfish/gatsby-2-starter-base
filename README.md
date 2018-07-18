@@ -48,6 +48,10 @@ overhead associated with such flexibility we favour the following conventions:
   data as props from ancestor components that pull in data from GraphQL) are
   placed in the `src/components` directory.
 
+- GraphQL fragments are placed in the `src/fragments` directory. This means all
+  fragments are co-located so you don't have to search through all of your
+  components to find one.
+
 [gatsby]: https://www.gatsbyjs.org/
 [oj]: https://orangejellyfish.com/
 [gprn]: https://www.npmjs.com/package/gatsby-plugin-react-next
