@@ -1,4 +1,4 @@
-import graphql from 'graphql';
+import { graphql } from 'gatsby';
 
 /* eslint-disable import/prefer-default-export */
 export const fragment = graphql`

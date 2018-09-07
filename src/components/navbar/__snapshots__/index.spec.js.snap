@@ -14,7 +14,7 @@ exports[`[Component] Navbar renders as expected 1`] = `
       tag={[Function]}
       to="/"
     >
-      test
+      Example
     </NavbarBrand>
     <NavbarToggler
       onClick={[Function]}
@@ -48,12 +48,12 @@ exports[`[Component] Navbar renders as expected 1`] = `
         <NavItem
           tag="li"
         >
-          <GatsbyLink
+          <Component
             className="nav-link"
             to="/about"
           >
             About
-          </GatsbyLink>
+          </Component>
         </NavItem>
       </Nav>
     </Collapse>

@@ -1,9 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Navbar from '.';
+import { CustomNavbar } from '.';
 
 describe('[Component] Navbar', () => {
   it('renders as expected', () => {
-    expect(shallow(<Navbar title="test" />)).toMatchSnapshot();
+    const data = {
+      site: {
+        config: {
+          title: 'Example',
+        },
+      },
+    };
+
+    expect(shallow(<CustomNavbar data={data} />)).toMatchSnapshot();
   });
 });

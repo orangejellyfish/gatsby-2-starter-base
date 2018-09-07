@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link, StaticQuery, graphql } from 'gatsby';
 import {
   Container,
   Navbar,
@@ -11,9 +11,15 @@ import {
   Nav,
 } from 'reactstrap';
 
-class CustomNavbar extends React.Component {
+export class CustomNavbar extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    data: PropTypes.shape({
+      site: PropTypes.shape({
+        config: PropTypes.shape({
+          title: PropTypes.string.isRequired,
+        }),
+      }),
+    }).isRequired,
   };
 
   constructor(props) {
@@ -32,7 +38,7 @@ class CustomNavbar extends React.Component {
     return (
       <Navbar expand="lg" dark className="bg-primary">
         <Container>
-          <NavbarBrand to="/" tag={Link}>{this.props.title}</NavbarBrand>
+          <NavbarBrand to="/" tag={Link}>{this.props.data.site.config.title}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -47,4 +53,15 @@ class CustomNavbar extends React.Component {
   }
 }
 
-export default CustomNavbar;
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          ...ConfigSiteTitle
+        }
+      }
+    `}
+    render={data => <CustomNavbar data={data} {...props} />}
+  />
+);

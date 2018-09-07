@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
+import Layout from '../components/layout';
 
 const IndexPage = () => (
-  <React.Fragment>
+  <Layout>
     <h1>Hello world!</h1>
     <p>
       Welcome to your new basic Gatsby site, scaffolded by the orangejellyfish
@@ -12,7 +13,7 @@ const IndexPage = () => (
       You can follow this link to the <Link to="/about">about page</Link> to see
       the single page app in action.
     </p>
-  </React.Fragment>
+  </Layout>
 );
 
 export default IndexPage;
