@@ -2,7 +2,7 @@
   "name": "@orangejellyfish/gatsby-starter-base",
   "description": "Gatsby starter kit for orangejellyfish projects",
   "version": "0.1.0",
-  "repository": "github:orangejellyfish/gatsby-starter-base",
+  "repository": "github:orangejellyfish/gatsby-2-starter-base",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
