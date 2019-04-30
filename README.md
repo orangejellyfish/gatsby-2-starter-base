@@ -22,7 +22,7 @@ above recommended). If those are available on your system you can use [npx][npx]
 to quickly scaffold a new site from the kit:
 
 ```sh
-npx -p gatsby-cli gatsby new $DIR_NAME https://github.com/orangejellyfish/gatsby-starter-base
+npx -p gatsby-cli gatsby new $DIR_NAME https://github.com/orangejellyfish/gatsby-2-starter-base
 cd $DIR_NAME
 npm start
 ```
