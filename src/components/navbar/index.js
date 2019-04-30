@@ -30,17 +30,20 @@ export class CustomNavbar extends React.Component {
     };
   }
 
-  toggle = () => this.setState({
-    isOpen: !this.state.isOpen,
-  })
+  toggle = () => this.setState(state => ({
+    isOpen: !state.isOpen,
+  }))
 
   render() {
+    const { isOpen } = this.state;
+    const { data } = this.props;
+
     return (
       <Navbar expand="lg" dark className="bg-primary">
         <Container>
-          <NavbarBrand to="/" tag={Link}>{this.props.data.site.config.title}</NavbarBrand>
+          <NavbarBrand to="/" tag={Link}>{data.site.config.title}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Link to="/about" className="nav-link">About</Link>
