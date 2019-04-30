@@ -11,7 +11,12 @@ exports[`[Component] Navbar renders as expected 1`] = `
     tag="div"
   >
     <NavbarBrand
-      tag={[Function]}
+      tag={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+        }
+      }
       to="/"
     >
       Example
@@ -48,12 +53,12 @@ exports[`[Component] Navbar renders as expected 1`] = `
         <NavItem
           tag="li"
         >
-          <Component
+          <ForwardRef
             className="nav-link"
             to="/about"
           >
             About
-          </Component>
+          </ForwardRef>
         </NavItem>
       </Nav>
     </Collapse>
